@@ -1,0 +1,49 @@
+Sign_Up --- For All
+
+
+create database SAP_Shop;
+
+
+CREATE TABLE SAP_Customer_Login_Data
+(
+    ID INT IDENTITY(1,1) PRIMARY KEY,
+    FirstName VARCHAR(50) ,
+    LastName VARCHAR(50) ,
+    Email VARCHAR(50) ,
+    PhoneNumber VARCHAR(50) ,
+    Gender VARCHAR(50) ,
+    DateOfBirth VARCHAR(50) ,
+    RegisterType VARCHAR(50) ,
+    Password VARCHAR(50) 
+);
+
+
+SELECT * FROM SAP_Customer_Login_Data
+SELECT * FROM SAP_Seller_Login_Data
+
+INSERT INTO SAP_Login_Data VALUES('Apon Kumar','Das','apondas007890@gmail.com', '01789879288', 'Male','', 'Personal Account', 'apondas007890');
+
+INSERT INTO SAP_Login_Data VALUES('Apon Kumar','Das','apondas007890@gmail.com', '01789879288', 'Male','Dec  5 2023  8:30PM', 'Personal Account', 'apondas007890');
+
+drop database SAP_Shop;
+drop table SAP_Login_Data;
+
+ALTER TABLE SAP_Login_Data ADD ID INT IDENTITY(1,1) PRIMARY KEY;
+
+
+
+______________________________Sign_Up-- For Admin
+
+
+CREATE TABLE SAP_Admin_Login_Data
+(
+FirstName VARCHAR(50) NOT NULL,
+LastName VARCHAR(50) NOT NULL,
+Email VARCHAR(50) NOT NULL,
+UserName VARCHAR(50) NOT NULL,
+Password VARCHAR(50) NOT NULL
+);
+
+
+SELECT * FROM SAP_Admin_Login_Data
+INSERT INTO SAP_Admin_Login_Data VALUES('Apon Kumar','Das','apondas007890@gmail.com', 'apondas00',  '007890');
